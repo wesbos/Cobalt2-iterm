@@ -22,7 +22,7 @@ pip install --user powerline-status
 
   ```
 git clone https://github.com/powerline/fonts
-cd powerline
+cd fonts
 ./install.sh
   ```
 
