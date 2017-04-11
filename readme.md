@@ -15,15 +15,15 @@ They work well together! You will need to install the patched powerline font as 
 1. Install Powerline and necessary fonts, one way is using [PIP](https://en.wikipedia.org/wiki/Pip_(package_manager)):
     - For first time *PIP* users refer to this [PIP installation guide](https://pip.pypa.io/en/stable/installing/)
     - To install Powerline using pip
-    ```
-    pip install --user powerline-status
-    ```
+      ```sh
+      pip install --user powerline-status
+      ```
     - Now install all necessary fonts by downloading or cloning git repository.
-    ```
-    git clone https://github.com/powerline/fonts
-    cd powerline
-    ./install.sh
-    ```
+      ```sh
+      git clone https://github.com/powerline/fonts
+      cd powerline
+      ./install.sh
+      ```
 1. In iTerm2 access the *Preferences* pane on the *Profiles* tab.
 1. Under the *Colors* tab import the `cobalt2.itermcolors` file via the *Load Presets* drop-down.
 1. Under the *Text* tab change the font for each type (*Regular* and *Non-ASCII*) to '**Inconsolata for Powerline**'. (Refer to the [powerline-fonts repo](https://github.com/powerline/fonts) for help on font installation.)
