@@ -49,7 +49,8 @@ prompt_context() {
   local user=`whoami`
 
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)✝"
+    prompt_segment black default "%(!.%{%F{yellow}%}.)"
+    prompt_segment black green "$(date +%H:%M)"
   fi
 }
 
@@ -69,9 +70,24 @@ prompt_git() {
   fi
 }
 
+# rbenv: currently selected ruby version
+prompt_ruby() {
+  if which rbenv &> /dev/null; then
+    ruby_ver="$(rbenv version 2>&1 | sed -e 's/ (set.*$//')"
+    if [[ "$ruby_ver" != "system" ]]; then
+      if [[ $ruby_ver = *not\ installed* ]]; then
+        prompt_segment magenta black
+      else
+        prompt_segment red black
+      fi
+      echo -n "${ruby_ver}"
+    fi
+  fi
+}
+
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment blue black '%3~'
+  prompt_segment blue default '%3~'
   # prompt_segment blue black "…${PWD: -30}"
 }
 
@@ -94,6 +110,7 @@ build_prompt() {
   RETVAL=$?
   prompt_status
   prompt_context
+  prompt_ruby
   prompt_dir
   prompt_git
   prompt_end
