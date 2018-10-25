@@ -26,10 +26,10 @@ cd fonts
 ./install.sh
   ```
 
-3. In iTerm2 access the *Preferences* pane on the *Profiles* tab.
-4. Under the *Colors* tab import the `cobalt2.itermcolors` file via the *Load Presets* drop-down.
-5. Under the *Text* tab change the font for each type (*Regular* and *Non-ASCII*) to '**Inconsolata for Powerline**'. (Refer to the [powerline-fonts repo](https://github.com/powerline/fonts) for help on font installation.)
-6. Refresh ZSH by typing `source ~/.zshrc` on the command line.
+4. In iTerm2 access the *Preferences* pane on the *Profiles* tab.
+5. Under the *Colors* tab import the `cobalt2.itermcolors` file via the *Load Presets* drop-down.
+6. Under the *Text* tab change the font for each type (*Regular* and *Non-ASCII*) to '**Inconsolata for Powerline**'. (Refer to the [powerline-fonts repo](https://github.com/powerline/fonts) for help on font installation.)
+7. Refresh ZSH by typing `source ~/.zshrc` on the command line.
 
 ##### ...in a MinTTY environment
 1. Drop the `cobalt2.zsh-theme` file in to the `~/.oh-my-zsh/themes/` directory.
