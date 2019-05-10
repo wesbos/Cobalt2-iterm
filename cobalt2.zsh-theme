@@ -11,6 +11,7 @@
 
 CURRENT_BG='NONE'
 SEGMENT_SEPARATOR=''
+USER_ICON=${COBALT_2_ICON:-'✝'}
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -49,7 +50,7 @@ prompt_context() {
   local user=`whoami`
 
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)✝"
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER_ICON"
   fi
 }
 
