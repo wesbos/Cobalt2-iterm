@@ -75,6 +75,14 @@ prompt_dir() {
   # prompt_segment blue black "…${PWD: -30}"
 }
 
+# Node:
+# - Display Node version in use
+prompt_node() {
+  if which node &> /dev/null; then
+    prompt_segment black green "$(node -v)"
+  fi
+}
+
 # Status:
 # - was there an error
 # - am I root
@@ -93,6 +101,7 @@ prompt_status() {
 build_prompt() {
   RETVAL=$?
   prompt_status
+  prompt_node
   prompt_context
   prompt_dir
   prompt_git
