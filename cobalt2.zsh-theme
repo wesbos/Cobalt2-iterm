@@ -11,7 +11,7 @@
 
 CURRENT_BG='NONE'
 SEGMENT_SEPARATOR=''
-USER_ICON=${COBALT_2_ICON:-'✝'}
+USER_ICON=${COBALT_2_ICON:-'λ'}
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -72,7 +72,14 @@ prompt_git() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment blue black '%3~'
+  if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
+    git_root=${$(git rev-parse --show-toplevel)##*/}
+    skipped_folders=${$(git rev-parse --show-cdup)%../*}
+    current_folder=${${$(git rev-parse --show-prefix)%/*}##*/}
+    prompt_segment magenta black "$git_root/$skipped_folders$current_folder"
+  else
+    prompt_segment blue black '%3~'
+  fi
   # prompt_segment blue black "…${PWD: -30}"
 }
 
@@ -90,12 +97,22 @@ prompt_status() {
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
 }
 
+
+prompt_kube() {
+  KUBE_SYMBOL="⎈"
+  # replace "-pegasus-aks" with empty string
+  kube_ctx=${$(kubectx -c)##*-}
+  kube_ns=$(kubens -c)
+  prompt_segment yellow black "$KUBE_SYMBOL $kube_ctx:$kube_ns"
+}
+
 ## Main prompt
 build_prompt() {
   RETVAL=$?
   prompt_status
   prompt_context
   prompt_dir
+  prompt_kube
   prompt_git
   prompt_end
 }
