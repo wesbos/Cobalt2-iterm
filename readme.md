@@ -39,3 +39,10 @@ cd fonts
 3. Install '**Inconsolata for Powerline**'. (Refer to the [powerline-fonts repo](https://github.com/powerline/fonts) for help on font installation.)
 4. Replace the `~/.minttyrc` file with the `.minttyrc` file in this repo.
 5. Restart your terminal.
+
+#### Visual Studio Code Settings
+By default VSCode integrated terminal won't be able to pick the powerline fonts directly.To make this work, you need to update the integrated terminal font family property.Follow the steps below:
+1. Open VS Code preference settings(`[CMD + ,]` for macOS).
+2. Add the following key to the user settings
+  `"terminal.integrated.fontFamily": "Inconsolata for Powerline"`
+3. Save and Restart.
