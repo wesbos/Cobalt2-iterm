@@ -2,8 +2,8 @@
 
 <img width="664" alt="iTerm2 Cobalt2" src="https://user-images.githubusercontent.com/176013/209395069-7e307ba0-d645-40d7-a235-267a9430080e.png">
 
-`cobalt2.itermcolors` is for anyone who uses iT
-erm2 and wants the colours. The `cobalt2.zsh-theme` is the prompt layout for zsh users.
+* `cobalt2.itermcolors` is Cobalt2 theme for iTerm2 - This makes things blue and yellow.
+* `cobalt2.zsh-theme` is the custom prompt for oh-my-zsh. It makes that cool line with folder and git status. 
 
 They work well together! You will need to install the patched powerline font as well: <https://github.com/powerline/fonts>
 
