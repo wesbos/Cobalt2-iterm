@@ -1,10 +1,9 @@
 # Cobalt2 for iTerm2 and ZSH
 
-Two things for lovers of the [Sublime Text Theme](https://github.com/wesbos/cobalt2). Cobalt2 in your terminal!
+<img width="664" alt="iTerm2 Cobalt2" src="https://user-images.githubusercontent.com/176013/209395069-7e307ba0-d645-40d7-a235-267a9430080e.png">
 
-![](http://wes.io/Ub3k/content)
-
-`cobalt2.itermcolors` is for anyone who uses iTerm2 and wants the colours. The `cobalt2.zsh-theme` is the prompt layout for zsh users.
+`cobalt2.itermcolors` is for anyone who uses iT
+erm2 and wants the colours. The `cobalt2.zsh-theme` is the prompt layout for zsh users.
 
 They work well together! You will need to install the patched powerline font as well: <https://github.com/powerline/fonts>
 
@@ -25,6 +24,8 @@ git clone https://github.com/powerline/fonts
 cd fonts
 ./install.sh
   ```
+  
+> note: if you are using iTerm2, they now have a checkbox for Powerline fonts `Profiles` → `Text`.
 
 3. In iTerm2 access the *Preferences* pane on the *Profiles* tab.
 4. Under the *Colors* tab import the `cobalt2.itermcolors` file via the *Load Presets* drop-down.
