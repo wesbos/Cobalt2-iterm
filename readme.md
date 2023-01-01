@@ -7,6 +7,14 @@
 
 They work well together! You will need to install the patched powerline font as well: <https://github.com/powerline/fonts>
 
+## Customizing the Icon
+
+By default the `✝`-icon will be displayed in the prompt. However, you can customize this by exporting a symbol in `COBALT_2_ICON` like so:
+
+```bash
+export COBALT_2_ICON=🦊
+```
+
 #### Step-by-step installation
 1. Drop the `cobalt2.zsh-theme` file in to the `~/.oh-my-zsh/themes/` directory.
 2. Open up your ZSH preferences at `~/.zshrc` and change the theme variable to `ZSH_THEME="cobalt2"`.
